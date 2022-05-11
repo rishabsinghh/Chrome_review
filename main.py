@@ -13,7 +13,6 @@ def main():
         predictor=PredictionFunc(file_object,log_writer)
         st.title("Chrome Reviews Problem")
         uploaded_file = st.file_uploader("Upload your data here", type=["csv"])
-        path_to_store=st.text_input("Enter the path to store the output file")
         if uploaded_file is not None:
                 data = pd.read_csv(uploaded_file)
                 st.subheader("Input Data")
