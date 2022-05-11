@@ -1,4 +1,3 @@
-from regex import E
 from prediction_func import PredictionFunc
 from application_logger.logger import app_logger
 import streamlit as st
