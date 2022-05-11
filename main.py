@@ -20,9 +20,7 @@ def main():
                 st.write(data)
                 if st.button("Predict"):
                     result = predictor.predict(data)
-                    result.to_csv(str(path_to_store)+"//"+"predicted_data.csv")
-                    st.subheader("Predictions")
-                    st.write("File created at: "+ str(path_to_store)+"\predicted_data.csv")
+                    st.write(result)
                     st.success("Predictions done")
                     log_writer.log(file_object,"Predictions done")
 
