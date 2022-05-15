@@ -23,6 +23,8 @@ def main():
                     st.success("Predictions done, Output:")
                     st.write(result)#Writing the output
                     result.to_csv("output.csv",index=False)#Exporting the output to a csv file
+                    with open('output.csv') as f:
+                        st.download_button('Download CSV', f)
                     log_writer.log(file_object,"Predictions done, output file generated")
 
         else:
