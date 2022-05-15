@@ -22,9 +22,7 @@ def main():
                     result = predictor.predict(data)#Calling the predict function
                     st.success("Predictions done, Output:")
                     st.write(result)#Writing the output
-                    result.to_csv("output.csv",index=False)#Exporting the output to a csv file
-                    with open('output.csv') as f:
-                        st.download_button('Download CSV', f)
+                    st.download_button("Download",result.to_csv(index=False))#Downloading the output
                     log_writer.log(file_object,"Predictions done, output file generated")
 
         else:
