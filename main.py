@@ -22,7 +22,7 @@ def main():
                     result = predictor.predict(data)#Calling the predict function
                     st.success("Predictions done, Output:")
                     st.write(result)#Writing the output
-                    st.download_button("Download",result.to_excel(index=False))#Downloading the output
+                    st.download_button("Download",result.to_excel("Output_file.xlsx",index=False))#Downloading the output
                     log_writer.log(file_object,"Predictions done, output file generated")
 
         else:
